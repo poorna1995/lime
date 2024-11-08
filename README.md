@@ -3,7 +3,7 @@
 This project uses LIME (Local Interpretable Model-Agnostic Explanations) to explain how a text classification model makes predictions. The goal is to help people understand why the model predicted a certain result for a specific text.
 
 ### Why LIME?
-Before we dive into LIME, let's first understand **Explainable AI (XAI)**.
+Before we dive into LIME, it's important to understand Explainable AI **(XAI)**.
 
 XAI is a set of techniques that helps us understand how machine learning models make decisions. This is especially important for complex models that are hard to interpret, like deep learning models, which are often viewed as "black boxes."
 
