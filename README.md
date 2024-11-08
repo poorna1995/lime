@@ -2,35 +2,32 @@
 
 This project uses LIME (Local Interpretable Model-Agnostic Explanations) to explain how a text classification model makes predictions. The goal is to help people understand why the model predicted a certain result for a specific text.
 
-Why LIME?
-Before we dive into LIME, let's first understand Explainable AI (XAI).
+### Why LIME?
+Before we dive into LIME, let's first understand **Explainable AI (XAI)**.
 
 XAI is a set of techniques that helps us understand how machine learning models make decisions. This is especially important for complex models that are hard to interpret, like deep learning models, which are often viewed as "black boxes."
 
-<img width="509" alt="Screenshot 2024-11-08 at 10 40 31 PM" src="https://github.com/user-attachments/assets/232f5f4f-db73-4ce7-879e-67060b3a6710">
+![XAI](https://github.com/user-attachments/assets/232f5f4f-db73-4ce7-879e-67060b3a6710)
 
 ### XAI Methods Categorization
 
 - **Agnostic**: Does the explanation method work with any machine learning model or is it specific to a type of model?
-- **Data Type**:What types of data does the method apply to (e.g., text, images, tabular data)?
+- **Data Type**: What types of data does the method apply to (e.g., text, images, tabular data)?
 - **Scope**: Does the method explain the model locally (individual predictions) or globally (overall model behavior)?
 - **Explanation Type**: What form do the explanations take? Are they visual, textual, or numeric?
 
-
-### Agnosticty:
+### Agnosticity:
 
 **Model Agnostic Methods**: These methods are not tied to any specific model and can be applied to a wide range of machine learning models. Examples include:
 - LIME
 - SHAP
-- Partial Dependence Plots(PDPs)
+- Partial Dependence Plots (PDPs)
 
 #### What is LIME?
 - **Local**: LIME creates a localized neighborhood around each instance to generate explanations specific to that instance.
 - **Interpretable**: The explanations are designed to be easily understandable by humans.
 - **Model-Agnostic**: LIME can be applied to any model, regardless of its underlying structure.
 - **Explanations**: LIME provides insights that help in understanding model behavior and interpreting predictions.
-
-
 
 ### Text Classification:
 
@@ -39,11 +36,8 @@ LIME is useful for explaining classification models. For example, when a model i
 #### Example of LIME in Text Classification:
 For a message, LIME might show that words like "thanks" and "appreciate" were the most important for the model to classify the message as "sincere."
 
-<img width="586" alt="Screenshot 2024-11-08 at 10 17 45 PM" src="https://github.com/user-attachments/assets/fcbf3b5b-89da-4ddc-b678-8a59a7185e94">
-
-
-<img width="290" alt="Screenshot 2024-11-08 at 10 18 44 PM" src="https://github.com/user-attachments/assets/40f093e3-3175-472a-8e50-2bc400837ac1">
-
+![Example of Text Classification](https://github.com/user-attachments/assets/fcbf3b5b-89da-4ddc-b678-8a59a7185e94)
+![Example Image](https://github.com/user-attachments/assets/40f093e3-3175-472a-8e50-2bc400837ac1)
 
 ### Limitation of LIME:
 
@@ -52,12 +46,4 @@ For a message, LIME might show that words like "thanks" and "appreciate" were th
 - **Stability and Consistency**: Random sampling can lead to different explanations for the same input, making results less reliable.
 - **Sampling Bias**: LIME’s synthetic data may not reflect real-world distributions, leading to biased or misleading explanations.
 
-
-
 This project is based on the reference from the paper [Link](https://arxiv.org/abs/1602.04938).
-
-
-
-
-
-
